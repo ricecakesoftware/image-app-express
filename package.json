@@ -16,6 +16,10 @@
     "ext": "js ts"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.2",
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "next": "12.1.0",

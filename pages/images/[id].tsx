@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react'
 import io from 'socket.io-client'
+import { AppBar, Card, Container, Typography, Toolbar } from '@mui/material';
 
 const Images : NextPage = () => {
   const [socket, _] = useState(() => io());
@@ -17,7 +18,18 @@ const Images : NextPage = () => {
     }
   }, [router, query])
   return (
-    <div><img src={src} width="256" height="256" /></div>
+    <Container>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            image-app-express
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Card>
+        <img src={src} />
+      </Card>
+    </Container>
   )
 }
 
